@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void main (){
+int main (void){
 	char str [51] = "\"Programming is like building a multilingual puzzle";
 	puts(str);
 	return (0);
