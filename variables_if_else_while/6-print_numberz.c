@@ -16,5 +16,5 @@ int main(void)
 
 	putchar('\n');
 
-	round(0);
+	return (0);
 }
