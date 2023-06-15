@@ -13,14 +13,14 @@ int main(void)
 	var_i = 48;
 	var_j = 49;
 
-	for (i = var_j; i < 57; i++)
+	for (i = var_i; i < 57; i++)
 	{
-		for (j = var_j; j <= 57; i++)
+		for (j = var_j; j <= 57; j++)
 		{
 			putchar(i);
 			putchar(j);
 
-			if (i != 56 && j != 57)
+			if (i != 56 || j != 57)
 			{
 				putchar(',');
 				putchar(' ');
