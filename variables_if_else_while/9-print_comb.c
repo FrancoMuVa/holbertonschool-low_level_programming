@@ -17,9 +17,9 @@ int main(void)
 		putchar(num);
 
 		if (num == 57)
-			putchar(ch - 8);
-		else
 			putchar(ch);
+
+		putchar(ch - 12);
 	}
 	putchar('\n');
 
