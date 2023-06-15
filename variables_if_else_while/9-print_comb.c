@@ -17,9 +17,10 @@ int main(void)
 		putchar(num);
 
 		if (num != 57)
+		{
 			putchar(ch);
-
-		putchar(ch - 12);
+			putchar(ch - 12);
+		}
 	}
 	putchar('\n');
 
