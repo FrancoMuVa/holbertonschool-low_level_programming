@@ -15,7 +15,7 @@ int main(void)
 	var_p = 50;
 	count = 7;
 
-	for (i = var_i; i < 55; i++)
+	for (i = var_i; i <= 55; i++)
 	{
 		for (j = var_j; j <= 56; j++)
 		{
@@ -30,12 +30,11 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-
 				if (p == 56)
-					var_p++;
+					var_p = var_p + 1;
 			}
 			if (var_j != 56)
-				var_j++;
+				var_j =  var_j + 1;
 		}
 		 var_i++;
 		 --count;
