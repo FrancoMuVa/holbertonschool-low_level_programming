@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - chek code.
+ * alphabet - chek code.
  *
  * Return: Always 0.
  */
 
-int main(void)
+int alphabet(void)
 {
 	int ch;
 
