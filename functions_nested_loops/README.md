@@ -1,5 +1,5 @@
 1: Program that prints _putchar, followed by a new line.
-2:
+2: Function that prints the alphabet, in lowercase.
 3:
 4:
 5:
