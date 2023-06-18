@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * _islower - chek the code.
  * @c: First operand
  *
