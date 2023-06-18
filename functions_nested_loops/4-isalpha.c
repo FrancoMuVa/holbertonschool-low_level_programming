@@ -9,10 +9,11 @@
 
 int _isalpha(int c)
 {
-	int ch;
+	int ch, i;
 
+	i = 0;
 	ch = 64;
-	while (ch != c)
+	while (ch != c && i != 1)
 	{
 		while (ch <= 90 || ch == c)
 		{
@@ -22,18 +23,24 @@ int _isalpha(int c)
 				return (1);
 		}
 
-		ch = 96;
-		while (ch <= 122 || ch == c)
+		if (ch != c)
 		{
-			ch++;
+			ch = 96;
+			while (ch <= 122 || ch == c)
+			{
+				ch++;
 
-			if (ch == c)
-				return (1);
+				if (ch == c)
+					return (1);
+			}
+			i = 1;
 		}
 	}
 
 	if (ch != c)
 		return (0);
+
+	_putchar('\n');
 
 	return (0);
 }
