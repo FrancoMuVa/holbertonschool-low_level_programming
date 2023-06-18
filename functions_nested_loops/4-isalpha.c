@@ -32,5 +32,8 @@ int _isalpha(int c)
 		}
 	}
 
+	if (ch != c)
+		return (0);
+
 	return (0);
 }
