@@ -1,12 +1,12 @@
 #include "main.h"
 
-/*
- * main - Print 10 times the alphabet
+/**
+ * alphabet10 - chek the code.
  *
- * Return: Always 0
+ * Return: Always 0.
  */
 
-int main(void)
+int alphabet10(void)
 {
 	int i;
 	char ch;
@@ -19,8 +19,9 @@ int main(void)
 			_putchar(ch);
 
 		 i++;
+
+		_putchar('\n');
 	}
-	_putchar(ch);
 
 	return (0);
 }
