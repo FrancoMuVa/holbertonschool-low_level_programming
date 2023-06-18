@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * alphabet10 - chek the code.
+ * print_alphabet_10 - chek the code.
  *
  * Return: Always 0.
  */
 
-int alphabet10(void)
+int print_alphabet_10(void)
 {
 	int i;
 	char ch;
