@@ -29,10 +29,14 @@ void times_table(void)
 				resu_ch = 32;
 				_putchar(resu_ch);
 			}
+
 			_putchar(resu2 + '0');
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
+			if (m != 9 && m != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+			}
 		}
 		v_m = 0;
 		_putchar('$');
