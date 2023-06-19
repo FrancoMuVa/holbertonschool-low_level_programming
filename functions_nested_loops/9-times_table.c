@@ -23,6 +23,8 @@ void times_table(void)
 				resu = resu / 10;
 				_putchar(resu + '0');
 			}
+			else if (m == 0)
+				resu2 = resu;
 			else
 			{
 				resu2 = resu;
