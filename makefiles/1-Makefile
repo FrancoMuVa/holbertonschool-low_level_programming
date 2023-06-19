@@ -1,0 +1,4 @@
+all: school
+
+school: school.o
+	$(CC) *.c -o school
