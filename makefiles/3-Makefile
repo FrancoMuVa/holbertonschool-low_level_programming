@@ -9,9 +9,6 @@ all:$(NAME)
 $(NAME):$(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-re: $(SRC)
-	$(CC) $(SRC) -o $(NAME)
-
 clean:
 	$(RM) -f *~ $(NAME)
 
@@ -20,3 +17,8 @@ oclean:
 
 fclean:
 	$(RM) -f *~ $(NAME) $(OBJ)
+
+re:$(SRC)
+	$(CC) $(OBJ) -o $(NAME)
+
+.PHONY: re
