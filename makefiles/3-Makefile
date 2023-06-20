@@ -1,0 +1,22 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = $(%.swp)
+
+all:$(NAME)
+
+$(NAME):$(OBJ)
+	$(CC) -c $(OBJ) -o $(NAME)
+
+re: $(SRC)
+	$(CC) -c $^ -o $(NAME)
+
+clean: 
+	rm -f $(RM)
+
+oclean:
+	rm -f $(OBJ)
+
+fclean:
+	rm -f $(RM) $(OBJ)
