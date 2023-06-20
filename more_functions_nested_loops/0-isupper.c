@@ -13,10 +13,11 @@ int _isupper(int c)
 
 	i = 65;
 	while (i <= 90 && i != c)
+	{
 		i++;
-
-	if (i == c)
-		return (1);
-	else
+	}
+	if (i > 90)
 		return (0);
+	else
+		return (1);
 }
