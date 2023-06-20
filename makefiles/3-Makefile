@@ -19,6 +19,4 @@ fclean:
 	$(RM) -f *~ $(NAME) $(OBJ)
 
 re:$(SRC)
-	$(CC) $(OBJ) -o $(NAME)
-
-.PHONY: re
+	$(CC) -Wall $(OBJ) -o $(NAME)
