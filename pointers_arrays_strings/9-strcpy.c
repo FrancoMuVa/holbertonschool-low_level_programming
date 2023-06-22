@@ -18,15 +18,17 @@ char *_strcpy(char *dest, char *src)
 	for (i = 0; src[i] != '\0'; i++)
 		c++;
 
-	for (i = 0; i <= c; i++)
+	if (c > 0)
 	{
-		*cpy = *orig;
+		for (i = 0; i <= c; i++)
+		{
+			*cpy = *orig;
+			cpy++;
+			orig++;
+		}
 		cpy++;
-		orig++;
+		*cpy = '\0';
 	}
-
-	cpy++;
-	*cpy = '\0';
 
 	return (dest);
 }
