@@ -20,6 +20,7 @@ char *_strcpy(char *dest, char *src)
 
 	if (c > 0)
 	{
+		c++;
 		for (i = 0; i <= c; i++)
 		{
 			*cpy = *orig;
