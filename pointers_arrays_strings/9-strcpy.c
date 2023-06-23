@@ -20,6 +20,8 @@ char *_strcpy(char *dest, char *src)
 
 
 	if (c > 0)
+		c--;
+	if (c > 0)
 	{
 		for (i = 0; i <= c; i++)
 		{
