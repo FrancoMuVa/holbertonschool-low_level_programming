@@ -19,8 +19,9 @@ char *_strcpy(char *dest, char *src)
 		c++;
 
 
-	if (c > 0)
+	if (c > 1)
 		c--;
+
 	if (c > 0)
 	{
 		for (i = 0; i <= c; i++)
