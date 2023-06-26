@@ -21,12 +21,12 @@ char *cap_string(char *s)
 	{
 		if (97 <= s[i] && 122 >= s[i])
 		{
-			j = 0;
-			while (j <= 13)
+			j = -1;
+			while (j <= 13 && s[i] != arr[j])
 			{
+				j++;
 				if (s[i - 1] == arr[j])
 					s[i] = s[i] - 32;
-				j++;
 			}
 		}
 		i++;
