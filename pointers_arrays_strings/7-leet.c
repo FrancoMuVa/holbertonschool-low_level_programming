@@ -17,7 +17,7 @@ char *leet(char *s)
 	{
 		for (j = 0; j <= 4; j++)
 		{
-			if (s[i] == let[j] || s[i] - 32 == let[j])
+			if (s[i] == let[j] && (s[i] - 32) == let[j])
 				s[i] = num[i];
 		}
 	}
