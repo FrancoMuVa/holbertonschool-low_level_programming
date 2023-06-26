@@ -13,22 +13,13 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	int i, c = 0;
-/*	char *pdest = dest, *psrc = src;*/
 
 	for (i = 0; dest[i] != '\0'; i++)
 		c++;
 
-/*	i = 0;
-	while (i <= c)
-	{
-		pdest++;
-		i++;
-	}
-*/
 	i = 0;
 	while (i < n && src[i] != '\0')
 	{
-/*		printf("psrc: %s", psrc);*/
 		dest[c] = src[i];
 		i++;
 		c++;
