@@ -18,7 +18,8 @@ char *leet(char *s)
 	{
 		for (j = 0; j <= 4; j++)
 		{
-			if (s[i] - 32 == let[j] || s[i] == let[j])
+/*			printf("s[i] - 32: %c| let[j]: %c\n", s[i] - 32, let[j]);*/
+			if (s[i] == let[j] || s[i] == let[j] - 32)
 			{
 				s[i] = num[j];
 			}
