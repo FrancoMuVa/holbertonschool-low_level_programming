@@ -19,10 +19,10 @@ int _strcmp(char *s1, char *s2)
 		j++;
 
 	if (i < j)
-		return (-1);
+		return (13);
 
 	else if (i > j)
-		return (1);
+		return (-13);
 
 	return (0);
 }
