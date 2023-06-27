@@ -28,6 +28,10 @@ char *_strpbrk(char *s, char *accept)
 		}
 		i++;
 	}
-	p = (p + i) - 1;
+
+	if (s[i] == '\0')
+		p = NULL;
+	else
+		p = (p + i) - 1;
 	return (p);
 }
