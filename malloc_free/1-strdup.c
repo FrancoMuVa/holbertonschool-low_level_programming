@@ -15,11 +15,14 @@ char *_strdup(char *str)
 
 	for (c = 0; str[c] != '\0'; c++)
 
+	if (str == NULL)
+		return (NULL);
+
 	p = malloc((c) * sizeof(char));
 
 	if (p == NULL)
 	{
-		p = NULL;
+		return (NULL);
 	}
 	else
 	{
@@ -28,6 +31,6 @@ char *_strdup(char *str)
 			p[i] = str[i];
 		}
 	}
-	
+
 	return (p);
 }
