@@ -1,1 +1,11 @@
-c - Functions, nested loops
+1: functions_nested_loops
+2: hello_world
+3: makefiles
+4: more_functions_nested_loops
+5: variables_if_else_while
+6: recursion
+7: static_libraries
+8: pointers_arrays_strings
+9: argc_argv
+10: malloc_free
+11: more_malloc_free
