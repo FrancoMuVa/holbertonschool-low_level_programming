@@ -12,6 +12,8 @@
 
 int selector(char x, va_list args)
 {
+	char *d;
+
 	switch (x)
 	{
 		case 'c':
@@ -24,11 +26,11 @@ int selector(char x, va_list args)
 			printf("%f", va_arg(args, double));
 			return (0);
 		case 's':
-			if (args == NULL)
-				printf("(nil)");
+			d = va_arg(args, char *);
+			if (d == NULL)
+				d = "(nil)";
+			printf("%s", d);
 
-			else
-				printf("%s", va_arg(args, char *));
 			return (0);
 	}
 	return (1);
