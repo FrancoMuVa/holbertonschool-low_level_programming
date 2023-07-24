@@ -10,8 +10,7 @@
 
 size_t print_list(const list_t *h)
 {
-/*	list_t *pointer = h;
-*/	int elements = 0;
+	int elements = 0;
 
 	while (h != NULL)
 	{
