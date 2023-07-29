@@ -13,7 +13,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int num = *n;
 	unsigned int j = 0;
-	int i = (sizeof(n) * 8 - 1), mult = 1, mask = 2147483646;
+	int i = (sizeof(n) * 8 - 1), mult = 1, mask = 2147483645;
 
 	if (num == 0)
 		return (1);
