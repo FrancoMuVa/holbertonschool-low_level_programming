@@ -34,7 +34,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	if (flag == 1)
 		i = index * 2 + 1;
 
-	while (i >= 0)
+	while (j <= sizeof(n) * 8 - 1)
 	{
 		if (j++ == index)
 		{
