@@ -13,10 +13,11 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int num = *n;
 	unsigned int j = 0;
-	int i = (sizeof(n) * 8 - 1), mult = 1, mask = 2147483645;
+	int i = (sizeof(n) * 8 - 1), mult = 1, mask = 2147483646;
 
 	if (num == 0)
 		return (1);
+
 	else if (index == 0)
 	{
 		num = (num & mask);
@@ -30,17 +31,17 @@ int clear_bit(unsigned long int *n, unsigned int index)
 			break;
 		i--;
 	}
-
 	while (j <= sizeof(n) * 8 - 1)
 	{
-		if (j++ == index)
+		if (j == index)
 		{
+			mask -= mult - 1;
 			num = (num & mask);
 			*n = num;
 			return (1);
 		}
 		mult *= 2;
-		mask -= mult;
+		j++;
 		i--;
 	}
 	return (-1);
