@@ -12,7 +12,7 @@
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int num = *n;
-	unsigned int j = 1;
+	unsigned int j = 0;
 	int i = (sizeof(n) * 8 - 1), mask = 1, flag = 0;
 
 	if (index == 0)
@@ -33,12 +33,10 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	if (flag == 1)
 		i = index * 2 + 1;
-	else
-		i += 1;
 
 	while (i >= 0)
 	{
-		if ((i - j) == index)
+		if (j++ == index)
 		{
 			num = (num | mask);
 			*n = num;
