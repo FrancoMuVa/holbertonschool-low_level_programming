@@ -11,5 +11,5 @@ int get_endianness(void)
 	int num = 1024;
 	char *ptr = (char *)&num;
 
-	return ((ptr[(num >> 10)] > ptr[(num >> 0)]) ? 0 : 1);
+	return ((ptr[(num >> 10)] < ptr[(num >> 0)]) ? 0 : 1);
 }
