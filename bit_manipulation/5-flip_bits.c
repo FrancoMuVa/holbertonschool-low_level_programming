@@ -6,7 +6,7 @@
  * @n: Unsigned Long Int.
  * @m: Unsigned Long Int.
  *
- * Return: 1 (Success), -1 Otherwise.
+ * Return: Number of bits to be flipped.
  */
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
@@ -22,15 +22,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		i--;
 	}
 
-	printf("\ni: %d", i);
-	printf("\n__N__ | __M__\n");
 	j = i;
 	while (i-- >= 0)
 	{
-		printf(" %ld   |   %ld \n", (n >> j), (m >> j));
 		count += (((n >> j) & 1) != ((m >> j) & 1)) ? 1 : 0;
 		j--;
 	}
-	printf("\n\n=======================\n=======================\n\n");
 	return (count);
 }
