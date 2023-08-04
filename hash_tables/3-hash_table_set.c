@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (new == NULL)
 		return (0);
-	if (strcmp(key, "") || key == NULL || ht == NULL)
+	if (strcmp(key, "") == 0 || key == NULL || ht == NULL)
 		return (1);
 
 	hash = (hash_djb2((const unsigned char *)key) % ht->size);
