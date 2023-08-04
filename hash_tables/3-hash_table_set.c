@@ -26,8 +26,7 @@ void _free(hash_node_t *node)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int hash;
-	hash_node_t *tmp;
-	hash_node_t *new = malloc(sizeof(hash_node_t));
+	hash_node_t *tmp, *new = malloc(sizeof(hash_node_t));
 
 	if (!new || strcmp(key, "") || key == NULL || ht == NULL)
 		return (0);
