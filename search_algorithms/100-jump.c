@@ -5,6 +5,8 @@
  * @array: array of integers.
  * @size: number of elements in @array.
  * @value: value to search for.
+ *
+ * Return: Index of de @value (Success), -1 Otherwise.
 */
 
 int jump_search(int *array, size_t size, int value)
@@ -14,10 +16,10 @@ int jump_search(int *array, size_t size, int value)
 	if (!array || size == 0)
 		return (-1);
 
-	printf("Value checked array[%d] = [%d]\n", array[first], first);
+	printf("Value checked array[%d] = [%d]\n", first, array[first]);
 	while (end < size_int && array[end] < value)
 	{
-		printf("Value checked array[%d] = [%d]\n", array[end], end);
+		printf("Value checked array[%d] = [%d]\n", end, array[end]);
 		first = end;
 		end += sqrt(size);
 	}
@@ -26,7 +28,7 @@ int jump_search(int *array, size_t size, int value)
 	i = first;
 	while (i <= end && i < size_int)
 	{
-		printf("Value checked array[%d] = [%d]\n", array[i], i);
+		printf("Value checked array[%d] = [%d]\n", i, array[i]);
 		if (array[i] == value)
 			return (i);
 		i++;
