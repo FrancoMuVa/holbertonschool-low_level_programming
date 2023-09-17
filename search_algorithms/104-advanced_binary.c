@@ -57,6 +57,23 @@ int bin_recursive(int *array, int low, int high, int value)
 }
 
 /**
+ * first_indx - Search for the index of the first @value in @array.
+ * @array: array of integers.
+ * @indx: index of @value.
+ * @value: value to search for.
+ *
+ * Return: Index of the first @value in @array.
+*/
+
+int first_indx(int *array, int indx, int value)
+{
+	if (array[indx - 1] == value)
+		return (first_indx(array, indx - 1, value));
+
+	return (indx);
+}
+
+/**
  * advanced_binary - Searches for a value in a sorted array of integers.
  * @array: array of integers.
  * @size: number of elements in @array.
@@ -73,8 +90,5 @@ int advanced_binary(int *array, size_t size, int value)
 		return (-1);
 
 	indx = bin_recursive(array, 0, size - 1, value);
-
-	while (array[indx - 1] == value)
-		indx--;
-	return (indx);
+	return (first_indx(array, indx, value));
 }
