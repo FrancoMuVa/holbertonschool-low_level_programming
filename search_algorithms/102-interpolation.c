@@ -47,10 +47,10 @@ int search_recursive(int *array, size_t size, int value, int low, int high)
 		return (pos);
 
 	else if (array[pos] < value)
-		return (interpolation_recursive(array, size, value, pos + 1, high));
+		return (search_recursive(array, size, value, pos + 1, high));
 
 	else if (array[pos] > value)
-		return (interpolation_recursive(array, size, value, low, pos - 1));
+		return (search_recursive(array, size, value, low, pos - 1));
 
 	return (0);
 }
@@ -68,5 +68,5 @@ int interpolation_search(int *array, size_t size, int value)
 {
 	if (!array || size == 0)
 		return (-1);
-	return (interpolation_recursive(array, size, value, 0, size - 1));
+	return (search_recursive(array, size, value, 0, size - 1));
 }
