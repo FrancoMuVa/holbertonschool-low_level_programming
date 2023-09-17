@@ -29,6 +29,7 @@ void print_array(int *array, int size)
  * @low: lower number of the subarray.
  * @high: largest number of the subarray.
  * @value: value to search for.
+ * @size: reference of the size of the subarray to be printed.
  *
  * Return: Index of the value (Success), -1 Otherwise.
 */
