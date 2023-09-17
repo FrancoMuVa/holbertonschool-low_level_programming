@@ -68,9 +68,6 @@ int expo_binary_search(int *array, int value, int low, int high)
 
 int expo_linear_search(int *array, size_t size, int value, int low, int high)
 {
-	if (low == (int)size - 1)
-		return (-1);
-
 	if (high >= (int)size)
 		high = size - 1;
 
@@ -79,10 +76,10 @@ int expo_linear_search(int *array, size_t size, int value, int low, int high)
 	if (value == array[high])
 		return (high);
 
-	else if (value > array[high])
+	else if (value > array[high] && high != (int)size - 1)
 		return (expo_linear_search(array, size, value, high, high * 2));
 
-	else if (value < array[high] && value > array[low])
+	else
 	{
 		printf("Value found between indexes [%d] and [%d]\n", low, high);
 		return (expo_binary_search(array, value, low, high));
