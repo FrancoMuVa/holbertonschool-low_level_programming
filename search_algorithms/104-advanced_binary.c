@@ -33,14 +33,14 @@ void print_array(int *array, int size)
  * Return: Index of the value (Success), -1 Otherwise.
 */
 
-int bin_recursive(int *array, int low, int high, int value)
+int bin_recursive(int *array, int low, int high, int value, int size)
 {
 	int middle;
 
 	if (low > high)
 		return (-1);
 
-	print_array(&array[low], (high - low) + 1);
+	print_array(&array[low], size);
 
 	middle = (low + high) / 2;
 
@@ -48,10 +48,10 @@ int bin_recursive(int *array, int low, int high, int value)
 		return (middle);
 
 	else if (value > array[middle])
-		return (bin_recursive(array, middle + 1, high, value));
+		return (bin_recursive(array, middle + 1, high, value, size / 2));
 
 	else if (value < array[middle])
-		return (bin_recursive(array, low, middle - 1, value));
+		return (bin_recursive(array, low, middle - 1, value, size / 2));
 
 	return (0);
 }
@@ -89,6 +89,6 @@ int advanced_binary(int *array, size_t size, int value)
 	if (!array || size == 0)
 		return (-1);
 
-	indx = bin_recursive(array, 0, size - 1, value);
+	indx = bin_recursive(array, 0, size - 1, value, size);
 	return (first_indx(array, indx, value));
 }
